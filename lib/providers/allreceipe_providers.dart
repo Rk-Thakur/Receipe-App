@@ -19,8 +19,7 @@ class AllReceipeProvider extends StateNotifier<List<receipe_model>> {
           //     'https://cooking-recipe2.p.rapidapi.com/getbycat/Indian Desserts',
           options: Options(headers: {
             'x-rapidapi-host': 'cooking-recipe2.p.rapidapi.com',
-            'x-rapidapi-key':
-                'e7db4f58a9msh38c61008b84e869p1960f1jsn61164c8d1a95'
+            'x-rapidapi-key': 'api key'
           }));
       final data = (response.data as List)
           .map((e) => receipe_model.fromJson(e))
@@ -38,8 +37,7 @@ class AllReceipeProvider extends StateNotifier<List<receipe_model>> {
           'https://cooking-recipe2.p.rapidapi.com/getbycat/$category',
           options: Options(headers: {
             'x-rapidapi-host': 'cooking-recipe2.p.rapidapi.com',
-            'x-rapidapi-key':
-                'e7db4f58a9msh38c61008b84e869p1960f1jsn61164c8d1a95'
+            'x-rapidapi-key': 'api key'
           }));
       final data = (response.data as List)
           .map((e) => receipe_model.fromJson(e))
