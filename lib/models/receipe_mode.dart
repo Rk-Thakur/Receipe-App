@@ -5,6 +5,7 @@ class receipe_model {
   late String category;
   late String url;
   late String image_url;
+  late Widget image;
   receipe_model(
       {required this.title,
       required this.category,
@@ -17,5 +18,6 @@ class receipe_model {
         category: json['category'],
         url: json['url'],
         image_url: json['img'] ?? '');
+    // image_url: json['img'] ?? Image.asset('assets/images/noimage.jpg'));
   }
 }

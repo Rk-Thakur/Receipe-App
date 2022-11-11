@@ -15,12 +15,13 @@ class CatergoryProvider extends StateNotifier<List<Category>> {
     final dio = Dio();
 
     try {
-      final response = await dio.get(
-          'https://cooking-recipe2.p.rapidapi.com/category',
-          options: Options(headers: {
-            'x-rapidapi-host': 'cooking-recipe2.p.rapidapi.com',
-            'x-rapidapi-key': 'api key'
-          }));
+      final response =
+          await dio.get('https://cooking-recipe2.p.rapidapi.com/category',
+              options: Options(headers: {
+                'x-rapidapi-host': 'cooking-recipe2.p.rapidapi.com',
+                'x-rapidapi-key':
+                    'e7db4f58a9msh38c61008b84e869p1960f1jsn61164c8d1a95'
+              }));
       final data =
           (response.data as List).map((e) => Category.fromJson(e)).toList();
       state = data;
@@ -33,12 +34,13 @@ class CatergoryProvider extends StateNotifier<List<Category>> {
     final dio = Dio();
 
     try {
-      final response = await dio.get(
-          'https://cooking-recipe2.p.rapidapi.com/category',
-          options: Options(headers: {
-            'x-rapidapi-host': 'cooking-recipe2.p.rapidapi.com',
-            'x-rapidapi-key': 'apikey'
-          }));
+      final response =
+          await dio.get('https://cooking-recipe2.p.rapidapi.com/category',
+              options: Options(headers: {
+                'x-rapidapi-host': 'cooking-recipe2.p.rapidapi.com',
+                'x-rapidapi-key':
+                    'e7db4f58a9msh38c61008b84e869p1960f1jsn61164c8d1a95'
+              }));
       final data =
           (response.data as List).map((e) => Category.fromJson(e)).toList();
       state = data;
